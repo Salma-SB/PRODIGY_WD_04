@@ -1,0 +1,622 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+
+}
+
+.section1{
+    position: relative;
+    width: 100vw;
+    height: 100vh; /* Assurez-vous également que la hauteur est correcte si nécessaire */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f1ff;
+}
+#navi{
+    position: fixed; /* Fixed position to keep the nav bar at the top */
+    display: flex;
+    height: 10%; /* Height of the navigation bar */
+    width: 100%; /* Full width of the viewport */
+    align-content: center; /* Align content vertically */
+    z-index: 10;
+}
+nav ul {
+    list-style-type: none; /* Remove default list styling */
+    padding-left: 340px; /* Left padding for alignment */
+}
+
+/* Styles for each list item in the navigation */
+nav ul li {
+    display: inline; /* Display list items inline */
+    margin-right: 40px; /* Space between items */
+    font-size: 21px; /* Font size */
+    color: rgb(0, 0, 0); /* Font color */
+    font-size: 23px; /* Adjusted font size */
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+li:hover{
+   cursor: pointer;
+   border-bottom: 3px solid #fca5f1; 
+   padding-bottom: 5px; /* Ajuste l'espace entre le texte et la bordure */
+  transition: 0.1s;
+
+}
+
+nav h1 {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 3px; /* Adjust the value as needed */
+    margin-top: 10px; /* Top margin */
+    padding-left: 100px; /* Left padding */
+    font-size: 30px; /* Font size */
+    color: rgb(0, 0, 0); /* Font color */
+    text-shadow: 0px 0px 5px #fca5f1; /* Text shadow effect */
+}
+/*#home{
+    border-bottom: 3px solid #fca5f1; /* Ajoute une bordure sous le texte 
+    padding-bottom: 5px; /* Ajuste l'espace entre le texte et la bordure */
+
+
+#ci1,#ci2,#ci3{
+    position: absolute;
+    background: #f0f1ff;
+    background: linear-gradient(to right, #cdb5ff,#fca5f1 );
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: zoomIn 2s ease-in-out infinite;
+
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1); /* Taille normale */
+    }
+    50% {
+        transform: scale(0.9); /* Zoom */
+    }
+    100% {
+        transform: scale(1); /* Retour à la taille normale */
+    }
+}
+#ci1{
+    margin-top:280px;
+    margin-left: -50px;
+    font-size:470px ;
+}
+#ci2{
+    margin-top: 180px;
+    margin-left: 120px;
+    font-size: 80px;
+}
+#ci3{
+    margin-top: 260px;
+    margin-left: 1000px;
+    font-size: 320px;
+
+}
+#img_prof{
+    z-index: 1;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 90px;
+    width: 650px;
+}
+.hello{
+    margin-top: 230px;
+    margin-left: 850px;
+    position: absolute; 
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    color: rgb(0, 0, 0);
+    font-size: 80px;
+}
+#parg{
+    position: absolute;
+    margin-top: 340px;
+    margin-left: 840px;
+    width: 350px;
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: 0;
+
+}
+.section2 {
+    position:relative;
+    width: 100vw;
+    height: 100vh; /* Assurez-vous également que la hauteur est correcte si nécessaire */
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    background: linear-gradient(to right, #bac4ff, #fca5f1);
+    background-size: 100%; /* Définir une taille de fond pour permettre l'animation */
+
+}
+
+
+.cards {
+    display: grid;
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 14px;
+    grid-template-columns: repeat(4, 1fr); /* Deux colonnes de largeur égale */
+    gap: 40px; /* Espacement entre les cartes */
+}
+.card1,.card2,.card3,.card4{
+    background: transparent;
+    border:2px solid white ;
+    border-radius: 15px;
+    width: 300px;
+    height: 380px;
+}
+
+.cards img{
+    width: 270px;
+    height: 140px;
+    margin-top: 15px;
+    margin-left: 12px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+}
+#card1{
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 0;
+    color:#ffffff;
+
+}
+.cont1{
+    margin-left: 17px;
+    margin-top: 28px;
+
+}
+#par1{
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #777777;
+    
+}
+.btns{
+    margin-top: 35px;
+    margin-left: 5px;
+}
+.btn a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+
+}
+.btn ,.btn-u{
+    box-shadow: 0px 0px 5px white;
+    border: 1px solid #dae0e4;
+    transition: 0.8s;
+    background: linear-gradient(to right, #ccb5ffc5,#cd00d4 );
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    font-size: 16px;
+    border-radius: 30px;
+}
+.btn-u{
+    margin-left: 130px;
+    background: transparent;
+}
+.btn-u a{
+    text-decoration: none;
+    color:#f35eda;
+    font-family: "Roboto", sans-serif;
+}
+.btn:hover{
+    background: linear-gradient(to right, #ccb5ffc5,#fa67ff );
+
+}
+.btn-u:hover{
+    background: white;
+
+}
+.section3{
+    position:relative;
+    width: 100vw;
+    height: 100vh; /* Assurez-vous également que la hauteur est correcte si nécessaire */
+    margin: 0;
+    margin-top: -100px;
+    padding: 0;
+    background: linear-gradient(to right, #bac4ff, #fca5f1);
+    background-size: 100%;
+}
+.t{
+    margin-top: 100px;
+}
+.about-me-par{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 90px;
+    
+    color: #ffffff;
+}
+#about-me
+{
+    width: 360px;
+    color: rgb(0, 0, 0);
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 20px;
+}
+#titl-about-me{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 35px;
+    text-shadow: 0px 0px 5px #fca5f1; /* Text shadow effect */
+
+}
+.tech{
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 50px;
+}
+
+.grp{
+    display: grid;
+    margin-bottom: 20px;
+    gap: 400px;
+    grid-template-columns: repeat(6, 1fr); /* Deux colonnes de largeur égale */
+}
+
+#tech{
+    font-family: 'Luckiest Guy', cursive;
+    color:white;
+    text-shadow: 0px 0px 5px #fca5f1; /* Text shadow effect */
+    font-size: 30px;
+}
+/* Ajoute des styles supplémentaires si nécessaire */
+#h2-2{
+    margin-left:55px ;
+    margin-top: 2px;
+}
+#h2-3{
+    margin-left:75px ;
+    margin-top: 2px;
+
+}
+#h2-4{
+    margin-left:9px ;
+    margin-top: 2px;
+
+}
+#h2-5{
+    margin-left:60px ;
+    margin-top: 6px;
+
+}
+#h2-6{
+    margin-left:75px ;
+    margin-top: 6px;
+
+}
+#h2-7{
+    margin-left:65px ;
+    margin-top: 4px;
+}
+h2{
+    font-family: 'Luckiest Guy', cursive;
+  font-size: 20px;
+}
+.vertical-line {
+    position: absolute;
+    border-left: 2px solid rgb(247, 245, 245); /* La ligne verticale */
+    height: 490px; /* Hauteur de la ligne */
+    margin-left: 580px; /* Espace à gauche */
+    margin-top: 80px;
+  }
+  .pourcentage{
+    box-shadow: 0px 0px 5px white;
+    border: 1px solid #dae0e4;
+    background: linear-gradient(to right, #b694ff,#ff5eea );
+    padding: 10px 15px;
+    position: absolute;
+    border-radius: 30px;
+    margin-top: -65px;
+    margin-left: 130px;
+  }
+  .prct1, .prct2, .prct3, .prct4, .prct5, .prct6 {
+    width: 0;
+    transition: width 2s ease; /* Ajustez la durée et la fonction de timing selon vos besoins */
+    overflow: hidden; /* Assure que rien n'affiche hors des limites */
+  }
+  
+  .expand {
+    /* Largeurs finales pour les éléments */
+  }
+  
+  .prct1.expand {
+    width: 370px;
+  }
+  
+  .prct2.expand {
+    width: 370px;
+  }
+  
+  .prct3.expand {
+    width: 370px;
+  }
+  
+  .prct4.expand {
+    width: 280px;
+  }
+  
+  .prct5.expand {
+    width: 280px;
+  }
+  
+  .prct6.expand {
+    width: 180px;
+  }
+
+  .section4{
+    position: relative;
+    width: 100vw;
+    height: 110vh; /* Assurez-vous également que la hauteur est correcte si nécessaire */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #bac4ff, #fca5f1);
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container{
+    position: absolute;
+    background:linear-gradient(to Left,#fc7feb,#cdb5ff,#dbdbdb) ;
+    box-shadow: 0px 0px 15px white;
+    height: 400px;
+    width: 1200px;
+    margin-top: -10px;
+  }
+  .ecr{
+    margin-top: 80px;
+    margin-left: 100px;
+  }
+  #foorm{
+    position: absolute;
+margin-left: 700px;
+margin-top: -200px;
+display: grid;
+width: 400px;
+gap: 5px;
+  }
+  #let{
+    margin-bottom: -35px;
+    font-size: 30px;
+  }
+  span{
+    color: #f35eda;
+  }
+  #sm{
+    font-size: 40px;
+  }
+  #let,#sm{
+    font-family: 'Luckiest Guy', cursive;
+     color: rgb(255, 255, 255);
+  }
+  #par{
+    margin-top: -15px;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  #btni{
+    box-shadow: 0px 0px 5px white;
+    border: 1px solid #dae0e4;
+    transition: 0.8s;
+    background: linear-gradient(to right, #cdb5ff,#fca5f1 );
+    padding: 10px 15px;
+    color: white;
+ cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    font-size: 16px;
+    border-radius: 30px;
+  }
+
+  .btn3{
+    margin-left: 100px;
+  }
+
+  .btn5{
+    position: absolute;
+    margin-top: 50px;
+  }
+  .btn6{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 150px;
+  }
+
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f5ff;
+    width: 100%;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #aaa;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+#sub {
+    background-color: #cd00d4;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sub i {
+    margin-right: 5px;
+}
+
+#sub:hover {
+    background-color: #f43cfa;
+    box-shadow: 0px 0px 5px white;
+}
+.social-icons {
+    margin-top: 95px;
+    position: absolute;
+    margin-left: 810px;
+}
+
+.icon {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #d401db;
+    text-decoration: none;
+    border: 2px solid #d401db;
+    border-radius: 20%;
+    padding: 10px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+.icons {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #d401db;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    background-color: white;
+    box-shadow: 0px 0px 10px white;
+    border-radius: 20%;
+    padding: 10px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+.icons:hover{
+    color: white;
+    border: 2px solid white;
+    background-color: #d401db;
+}
+.icon:hover {
+    background-color: #f3f2f3;
+    color: rgb(255, 65, 239);
+}
+
+.icon.fb,.icon.insta, .icon.twitter {
+    border-color: #e0e0e0;
+}
+footer{
+    background-color: #cd00d4;
+    position: absolute;
+    width: 100vw;
+    height: 182px;
+    margin-left: -100px;
+    margin-top: 210px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    color: white;
+    
+}
+#nom{
+    font-family : "Dancing Script", cursive;
+   margin-bottom: -15px;
+}
+h3{
+    font-family: "Roboto", sans-serif;
+
+}
+.bx-menu {
+    color: rgb(255, 255, 255); /* Font color */
+    font-size: 31px; /* Icon font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: absolute; /* Absolute position for precise placement */
+    right: 35px; /* Distance from the right edge */
+    margin-top: 15px; /* Margin from the top */
+}
+
+/* Responsive styles for screens narrower than 1100px */
+@media (max-width: 1200px) {
+    nav{
+        margin-bottom: 80px;
+        position: absolute;
+        background: linear-gradient(to right, #cdb5ff,#fca5f1 );
+        border : 2px rgba(255, 255, 255, 0.5);
+        border-right: 2px rgba(255, 255, 255, 0.2);
+        border-bottom: 2px rgba(255, 255, 255, 0.5);
+       backdrop-filter: 10px;    
+    }
+    nav h1{
+          margin-left: -70px;
+          color: white;
+    }
+    nav ul {
+        display: none; /* Hide the menu by default on smaller screens */
+        height: 530px; /* Adjusted height */
+        margin-top: 16px;
+        width: 100px; /* Narrow width for positioning */
+        background: linear-gradient(to right, #cdb5ff,#fca5f1 );
+        border-right: 2px rgba(255, 255, 255, 0.2);
+        border-bottom: 2px rgba(255, 255, 255, 0.5);
+        border-top:none ;
+        border-radius: 5px;
+       backdrop-filter: 10px;        
+       flex-direction: column; /* Stack menu items vertically */
+        position: absolute; /* Absolute position */
+        top: 44px; /* Position from the top */
+        right: 0; /* Align to the right edge */
+        justify-content: center; /* Center items vertically */
+        align-items: center; /* Center items horizontally */
+        left: auto; /* Adjust to automatic positioning */
+    }
+
+    /* Display the menu when the 'active' class is added */
+    nav ul.active {
+        display: flex;
+    }
+    /* Styles for list items in the responsive menu */
+    nav ul li {
+        padding: 10px 12px;
+        border-radius: 30px;
+        background-color: #ffffffe8;
+        margin: 25px 0; /* Space between items vertically */
+        color: rgb(255, 30, 199); /* Font color */
+        margin-right: 320px; /* Margin to the right for alignment */
+    }
+    nav ul li a{
+        color: rgb(255, 30, 199); /* Font color */
+
+    }
+    #home{
+        border-bottom:none; 
+
+    }
+}
+
+/* Styles for screens wider than 1100px */
+@media screen and (min-width: 1200px) {
+    /* Hide the menu icon on larger screens */
+
+    nav .bx-menu {
+        display: none;
+    }
+}
